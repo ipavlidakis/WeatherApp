@@ -4,7 +4,7 @@
 
 ## Build generated
 build/
-DerivedData/
+__DerivedData/
 
 ## Various settings
 *.pbxuser
@@ -21,6 +21,7 @@ xcuserdata/
 *.moved-aside
 *.xccheckout
 *.xcscmblueprint
+*.xcuserstate
 
 ## Obj-C/Swift specific
 *.hmap
