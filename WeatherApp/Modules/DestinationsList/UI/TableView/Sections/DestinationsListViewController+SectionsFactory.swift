@@ -15,6 +15,7 @@ extension DestinationsListViewController {
         let fontProvider: FontProviding
         let colorProvider: ColorProviding
         let locationProvider: LocationProvider
+        let router: Routing
         let itemsProvider: () -> [Destination]
 
         func makeSections() -> [SectionProtocol] {
@@ -24,6 +25,7 @@ extension DestinationsListViewController {
             if locationProvider.isAuthorized() {
                 
                 sections.append(DestinationsListViewController.CurrentDestination(
+                    router: router,
                     configurator: DestinationTableViewCellConfigurator(
                         fontProvider: fontProvider,
                         colorProvider: colorProvider)))
@@ -41,6 +43,7 @@ extension DestinationsListViewController {
                 dateFormatter.timeStyle = .none
 
                 sections.append(DestinationsListViewController.Destinations(
+                    router: router,
                     configurator: DestinationTableViewCellConfigurator(
                         fontProvider: fontProvider,
                         colorProvider: colorProvider),

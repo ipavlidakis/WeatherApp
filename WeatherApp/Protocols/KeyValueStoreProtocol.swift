@@ -12,6 +12,8 @@ protocol KeyValueStoreProtocol {
 
     func bool(forKey: String) -> Bool
 
+    func integer(forKey: String) -> Int
+
     func data(forKey: String) -> Data?
 
     func set(_ value: Any?, forKey defaultName: String)

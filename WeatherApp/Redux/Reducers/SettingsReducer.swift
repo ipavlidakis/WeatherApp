@@ -1,5 +1,5 @@
 //
-//  UnitsReducer.swift
+//  SettingsReducer.swift
 //  WeatherApp
 //
 //  Created by Ilias Pavlidakis on 01/07/2019.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct UnitsReducer: ReduxMeReducerProtocol {
+struct SettingsReducer: ReduxMeReducerProtocol {
 
     func reduce<State: ReduxMeStateProtocol>(
         _ state: State,
@@ -16,13 +16,12 @@ struct UnitsReducer: ReduxMeReducerProtocol {
 
         guard
             let appState = state as? AppState,
-            let action = action as? UpdateUnitsAction
+            let action = action as? UpdateSettingsAction
         else { return state }
 
         return AppState(
             currentLocation: appState.currentLocation,
-            forecastState: appState.forecastState,
-            unitsState: UnitsState(unit: action.unit),
+            settingsState: SettingsState(unit: action.unit, numberOfDaysToFetch: action.numberOfDaysToFetch),
             destinationsState: appState.destinationsState) as! State
     }
 }

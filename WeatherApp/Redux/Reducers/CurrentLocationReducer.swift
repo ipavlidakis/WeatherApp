@@ -26,8 +26,7 @@ struct CurrentLocationReducer: ReduxMeReducerProtocol {
 
             return AppState(
                 currentLocation: currentLocation,
-                forecastState: appState.forecastState,
-                unitsState: appState.unitsState,
+                settingsState: appState.settingsState,
                 destinationsState: appState.destinationsState) as! State
 
         case let action as LocationAction.UpdateLocation:
@@ -39,8 +38,7 @@ struct CurrentLocationReducer: ReduxMeReducerProtocol {
 
             return AppState(
                 currentLocation: currentLocation,
-                forecastState: appState.forecastState,
-                unitsState: appState.unitsState,
+                settingsState: appState.settingsState,
                 destinationsState: appState.destinationsState) as! State
         default:
             return state

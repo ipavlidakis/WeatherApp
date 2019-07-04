@@ -15,7 +15,7 @@ struct CurrentLocationState: ReduxMeSubstateProtocol, Equatable {
     let hasAccess: Bool
 
     static let initial = CurrentLocationState(
-        name: "Unknown",
+        name: "Current Location",
         coordinates: Coordinates(latitude: 0, longitude: 0),
         hasAccess: false)
 }

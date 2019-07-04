@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		40151B7822C97CA900540A04 /* UnitsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40151B7722C97CA900540A04 /* UnitsState.swift */; };
-		40151B7A22C97E2E00540A04 /* UnitsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40151B7922C97E2E00540A04 /* UnitsReducer.swift */; };
-		40151B7C22C97E3900540A04 /* UpdateUnitsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40151B7B22C97E3900540A04 /* UpdateUnitsAction.swift */; };
+		40151B7822C97CA900540A04 /* SettingsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40151B7722C97CA900540A04 /* SettingsState.swift */; };
+		40151B7A22C97E2E00540A04 /* SettingsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40151B7922C97E2E00540A04 /* SettingsReducer.swift */; };
+		40151B7C22C97E3900540A04 /* UpdateSettingsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40151B7B22C97E3900540A04 /* UpdateSettingsAction.swift */; };
 		40151B7E22C97EEE00540A04 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 40151B7D22C97EEE00540A04 /* Settings.bundle */; };
 		40151B8022C9801800540A04 /* SettingsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40151B7F22C9801800540A04 /* SettingsProvider.swift */; };
 		40151B8222CAA43600540A04 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40151B8122CAA43600540A04 /* Router.swift */; };
@@ -46,6 +46,13 @@
 		40151BD522CAC75200540A04 /* AddNewDestinationViewController+LoadingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40151BD422CAC75200540A04 /* AddNewDestinationViewController+LoadingSection.swift */; };
 		40151BD722CACA1B00540A04 /* SectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40151BD622CACA1B00540A04 /* SectionProtocol.swift */; };
 		40151BDA22CAD3B000540A04 /* DestinationsListViewController+CurrentDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40151BD922CAD3B000540A04 /* DestinationsListViewController+CurrentDestination.swift */; };
+		4073A5E522CEA0DE002C2F7B /* SplitNavigatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4073A5E422CEA0DE002C2F7B /* SplitNavigatorProtocol.swift */; };
+		4073A5E722CEA117002C2F7B /* UISplitViewController+SplitNavigatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4073A5E622CEA117002C2F7B /* UISplitViewController+SplitNavigatorProtocol.swift */; };
+		4073A5EB22CEB218002C2F7B /* NumberOfDaysTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4073A5E922CEB218002C2F7B /* NumberOfDaysTableViewCell.swift */; };
+		4073A5EC22CEB218002C2F7B /* NumberOfDaysTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4073A5EA22CEB218002C2F7B /* NumberOfDaysTableViewCell.xib */; };
+		4073A5EE22CEB283002C2F7B /* NumberOfDaysCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4073A5ED22CEB283002C2F7B /* NumberOfDaysCellViewModel.swift */; };
+		4073A5F022CEB29C002C2F7B /* NumberOfDaysTemperatureTableViewCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4073A5EF22CEB29C002C2F7B /* NumberOfDaysTemperatureTableViewCellConfigurator.swift */; };
+		4073A5F222CEB339002C2F7B /* ForecastViewController+NumberOfDaysSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4073A5F122CEB339002C2F7B /* ForecastViewController+NumberOfDaysSection.swift */; };
 		407A102122C2C4B8005DA2D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A102022C2C4B8005DA2D7 /* AppDelegate.swift */; };
 		407A102A22C2C4B9005DA2D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 407A102922C2C4B9005DA2D7 /* Assets.xcassets */; };
 		407A102D22C2C4B9005DA2D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 407A102B22C2C4B9005DA2D7 /* LaunchScreen.storyboard */; };
@@ -89,7 +96,6 @@
 		407A109522C2E2C1005DA2D7 /* ReduxMeObservableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A108022C2E2C1005DA2D7 /* ReduxMeObservableProtocol.swift */; };
 		407A109822C2E2DC005DA2D7 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A109722C2E2DC005DA2D7 /* AppState.swift */; };
 		407A109B22C2E312005DA2D7 /* CurrentLocationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A109A22C2E312005DA2D7 /* CurrentLocationState.swift */; };
-		407A109D22C2E3B1005DA2D7 /* ForecastState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A109C22C2E3B1005DA2D7 /* ForecastState.swift */; };
 		407A109F22C2E441005DA2D7 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A109E22C2E441005DA2D7 /* LoadingState.swift */; };
 		407A10A222C2E541005DA2D7 /* LocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A10A122C2E541005DA2D7 /* LocationProvider.swift */; };
 		407A10A522C2E550005DA2D7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407A10A422C2E550005DA2D7 /* CoreLocation.framework */; };
@@ -130,9 +136,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		40151B7722C97CA900540A04 /* UnitsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitsState.swift; sourceTree = "<group>"; };
-		40151B7922C97E2E00540A04 /* UnitsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitsReducer.swift; sourceTree = "<group>"; };
-		40151B7B22C97E3900540A04 /* UpdateUnitsAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUnitsAction.swift; sourceTree = "<group>"; };
+		40151B7722C97CA900540A04 /* SettingsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsState.swift; sourceTree = "<group>"; };
+		40151B7922C97E2E00540A04 /* SettingsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsReducer.swift; sourceTree = "<group>"; };
+		40151B7B22C97E3900540A04 /* UpdateSettingsAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateSettingsAction.swift; sourceTree = "<group>"; };
 		40151B7D22C97EEE00540A04 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		40151B7F22C9801800540A04 /* SettingsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProvider.swift; sourceTree = "<group>"; };
 		40151B8122CAA43600540A04 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -169,6 +175,13 @@
 		40151BD422CAC75200540A04 /* AddNewDestinationViewController+LoadingSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddNewDestinationViewController+LoadingSection.swift"; sourceTree = "<group>"; };
 		40151BD622CACA1B00540A04 /* SectionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionProtocol.swift; sourceTree = "<group>"; };
 		40151BD922CAD3B000540A04 /* DestinationsListViewController+CurrentDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DestinationsListViewController+CurrentDestination.swift"; sourceTree = "<group>"; };
+		4073A5E422CEA0DE002C2F7B /* SplitNavigatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitNavigatorProtocol.swift; sourceTree = "<group>"; };
+		4073A5E622CEA117002C2F7B /* UISplitViewController+SplitNavigatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISplitViewController+SplitNavigatorProtocol.swift"; sourceTree = "<group>"; };
+		4073A5E922CEB218002C2F7B /* NumberOfDaysTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfDaysTableViewCell.swift; sourceTree = "<group>"; };
+		4073A5EA22CEB218002C2F7B /* NumberOfDaysTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumberOfDaysTableViewCell.xib; sourceTree = "<group>"; };
+		4073A5ED22CEB283002C2F7B /* NumberOfDaysCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfDaysCellViewModel.swift; sourceTree = "<group>"; };
+		4073A5EF22CEB29C002C2F7B /* NumberOfDaysTemperatureTableViewCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfDaysTemperatureTableViewCellConfigurator.swift; sourceTree = "<group>"; };
+		4073A5F122CEB339002C2F7B /* ForecastViewController+NumberOfDaysSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ForecastViewController+NumberOfDaysSection.swift"; sourceTree = "<group>"; };
 		407A101D22C2C4B8005DA2D7 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		407A102022C2C4B8005DA2D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		407A102922C2C4B9005DA2D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -216,7 +229,6 @@
 		407A108022C2E2C1005DA2D7 /* ReduxMeObservableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReduxMeObservableProtocol.swift; sourceTree = "<group>"; };
 		407A109722C2E2DC005DA2D7 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		407A109A22C2E312005DA2D7 /* CurrentLocationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationState.swift; sourceTree = "<group>"; };
-		407A109C22C2E3B1005DA2D7 /* ForecastState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastState.swift; sourceTree = "<group>"; };
 		407A109E22C2E441005DA2D7 /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
 		407A10A122C2E541005DA2D7 /* LocationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationProvider.swift; sourceTree = "<group>"; };
 		407A10A422C2E550005DA2D7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -308,6 +320,7 @@
 			children = (
 				40151B9922CAADAB00540A04 /* KeyValueStoreProtocol.swift */,
 				40151B9D22CAAE2E00540A04 /* NavigatorProtocol.swift */,
+				4073A5E422CEA0DE002C2F7B /* SplitNavigatorProtocol.swift */,
 				40151BD622CACA1B00540A04 /* SectionProtocol.swift */,
 			);
 			path = Protocols;
@@ -420,6 +433,15 @@
 				40151BCF22CAC60C00540A04 /* AddDestinationsLoadingTableViewCell.xib */,
 			);
 			path = AddDestinationsLoadingTableViewCell;
+			sourceTree = "<group>";
+		};
+		4073A5E822CEB202002C2F7B /* NumberOfDays */ = {
+			isa = PBXGroup;
+			children = (
+				4073A5E922CEB218002C2F7B /* NumberOfDaysTableViewCell.swift */,
+				4073A5EA22CEB218002C2F7B /* NumberOfDaysTableViewCell.xib */,
+			);
+			path = NumberOfDays;
 			sourceTree = "<group>";
 		};
 		407A101422C2C4B8005DA2D7 = {
@@ -597,8 +619,7 @@
 			isa = PBXGroup;
 			children = (
 				407A109A22C2E312005DA2D7 /* CurrentLocationState.swift */,
-				407A109C22C2E3B1005DA2D7 /* ForecastState.swift */,
-				40151B7722C97CA900540A04 /* UnitsState.swift */,
+				40151B7722C97CA900540A04 /* SettingsState.swift */,
 				40151B9022CAABFD00540A04 /* DestinationsState.swift */,
 			);
 			path = Substates;
@@ -632,7 +653,7 @@
 			isa = PBXGroup;
 			children = (
 				407A10A722C2E68B005DA2D7 /* UpdateLocationAuthorization.swift */,
-				40151B7B22C97E3900540A04 /* UpdateUnitsAction.swift */,
+				40151B7B22C97E3900540A04 /* UpdateSettingsAction.swift */,
 				40151B9222CAAC3600540A04 /* UpdateDestinations.swift */,
 			);
 			path = Actions;
@@ -642,7 +663,7 @@
 			isa = PBXGroup;
 			children = (
 				407A10AA22C2E6AA005DA2D7 /* CurrentLocationReducer.swift */,
-				40151B7922C97E2E00540A04 /* UnitsReducer.swift */,
+				40151B7922C97E2E00540A04 /* SettingsReducer.swift */,
 				40151B9422CAAC5100540A04 /* DestinationsReducer.swift */,
 			);
 			path = Reducers;
@@ -654,6 +675,7 @@
 				407A10AD22C2F28D005DA2D7 /* String+Localize.swift */,
 				40151B9B22CAADC300540A04 /* UserDefaults+KeyValueStoreProtocol.swift */,
 				40151B9F22CAAE5700540A04 /* UINavigationController+NavigatorProtocol.swift */,
+				4073A5E622CEA117002C2F7B /* UISplitViewController+SplitNavigatorProtocol.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -680,6 +702,7 @@
 		407A10B922C952F8005DA2D7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				4073A5E822CEB202002C2F7B /* NumberOfDays */,
 				407A10DE22C96CDA005DA2D7 /* DailyForecast */,
 				407A10D322C96321005DA2D7 /* ForecastProperties */,
 				407A10BA22C952FE005DA2D7 /* Temperature */,
@@ -702,6 +725,7 @@
 				407A10C022C95423005DA2D7 /* TemperatureTableViewCellConfigurator.swift */,
 				407A10D822C9640E005DA2D7 /* ForecastPropertiesTableViewCellConfigurator.swift */,
 				407A10E522C96DD3005DA2D7 /* DailyForecastTableViewCellConfigurator.swift */,
+				4073A5EF22CEB29C002C2F7B /* NumberOfDaysTemperatureTableViewCellConfigurator.swift */,
 			);
 			path = Configurators;
 			sourceTree = "<group>";
@@ -712,6 +736,7 @@
 				407A10C322C95452005DA2D7 /* TemperatureCellViewModel.swift */,
 				407A10DA22C9642C005DA2D7 /* ForecastPropertiesViewModel.swift */,
 				407A10E322C96DA6005DA2D7 /* DailyForecastViewModel.swift */,
+				4073A5ED22CEB283002C2F7B /* NumberOfDaysCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -723,6 +748,7 @@
 				407A10CA22C956C4005DA2D7 /* ForecastViewController+TemperatureSection.swift */,
 				407A10DC22C9669F005DA2D7 /* ForecastViewController+ForecastPropertiesSection.swift */,
 				407A10E722C96EEB005DA2D7 /* ForecastViewController+DailyForecastSection.swift */,
+				4073A5F122CEB339002C2F7B /* ForecastViewController+NumberOfDaysSection.swift */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -831,6 +857,7 @@
 				40151BB022CAB65E00540A04 /* DestinationTableViewCell.xib in Resources */,
 				40151BA722CAB2DF00540A04 /* NoDestinationsTableViewCell.xib in Resources */,
 				40151BC322CAC02800540A04 /* SingleDestinationTableViewCell.xib in Resources */,
+				4073A5EC22CEB218002C2F7B /* NumberOfDaysTableViewCell.xib in Resources */,
 				40151BD122CAC60C00540A04 /* AddDestinationsLoadingTableViewCell.xib in Resources */,
 				407A102A22C2C4B9005DA2D7 /* Assets.xcassets in Resources */,
 				407A10BE22C9532D005DA2D7 /* TemperatureTableViewCell.xib in Resources */,
@@ -854,7 +881,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				407A10C822C954A5005DA2D7 /* ColorProvider.swift in Sources */,
-				407A109D22C2E3B1005DA2D7 /* ForecastState.swift in Sources */,
 				40151B9122CAABFD00540A04 /* DestinationsState.swift in Sources */,
 				407A109B22C2E312005DA2D7 /* CurrentLocationState.swift in Sources */,
 				407A108822C2E2C1005DA2D7 /* ReduxMeDisposable.swift in Sources */,
@@ -864,6 +890,7 @@
 				407A105B22C2DD4E005DA2D7 /* DailyForecast.swift in Sources */,
 				40151BC522CAC07D00540A04 /* SingleDestinationTableViewCellConfigurator.swift in Sources */,
 				407A108D22C2E2C1005DA2D7 /* ReduxMeSubstateProtocol.swift in Sources */,
+				4073A5F022CEB29C002C2F7B /* NumberOfDaysTemperatureTableViewCellConfigurator.swift in Sources */,
 				407A108522C2E2C1005DA2D7 /* ReduxMe+CompoundReducer.swift in Sources */,
 				407A108422C2E2C1005DA2D7 /* ReduxMe+Dispatcher.swift in Sources */,
 				40151BAF22CAB65E00540A04 /* DestinationTableViewCell.swift in Sources */,
@@ -875,14 +902,15 @@
 				407A108722C2E2C1005DA2D7 /* ReduxMe+Observable.swift in Sources */,
 				40151B9A22CAADAB00540A04 /* KeyValueStoreProtocol.swift in Sources */,
 				40151B8222CAA43600540A04 /* Router.swift in Sources */,
-				40151B7822C97CA900540A04 /* UnitsState.swift in Sources */,
+				40151B7822C97CA900540A04 /* SettingsState.swift in Sources */,
 				407A10CD22C957BE005DA2D7 /* ForecastViewController+SectionsFactory.swift in Sources */,
-				40151B7C22C97E3900540A04 /* UpdateUnitsAction.swift in Sources */,
+				40151B7C22C97E3900540A04 /* UpdateSettingsAction.swift in Sources */,
 				407A108E22C2E2C1005DA2D7 /* ReduxMeSerialDispatchQueueing.swift in Sources */,
 				40151BC922CAC2B600540A04 /* AddNewDestinationViewController+SearchResultsSection.swift in Sources */,
 				407A108C22C2E2C1005DA2D7 /* ReduxMeStateProtocol.swift in Sources */,
 				40151BDA22CAD3B000540A04 /* DestinationsListViewController+CurrentDestination.swift in Sources */,
 				40151B8722CAA95C00540A04 /* DestinationsListViewController.swift in Sources */,
+				4073A5F222CEB339002C2F7B /* ForecastViewController+NumberOfDaysSection.swift in Sources */,
 				407A108F22C2E2C1005DA2D7 /* ReduxMeListenerProtocol.swift in Sources */,
 				40151B9C22CAADC300540A04 /* UserDefaults+KeyValueStoreProtocol.swift in Sources */,
 				40151BB722CABA6700540A04 /* AddNewDestinationViewController.swift in Sources */,
@@ -891,7 +919,7 @@
 				407A104422C2C4D3005DA2D7 /* ForecastService.swift in Sources */,
 				407A102122C2C4B8005DA2D7 /* AppDelegate.swift in Sources */,
 				407A109222C2E2C1005DA2D7 /* ReduxMeStoreProtocol.swift in Sources */,
-				40151B7A22C97E2E00540A04 /* UnitsReducer.swift in Sources */,
+				40151B7A22C97E2E00540A04 /* SettingsReducer.swift in Sources */,
 				407A108922C2E2C1005DA2D7 /* ReduxMeMiddlewareProtocol.swift in Sources */,
 				40151BD722CACA1B00540A04 /* SectionProtocol.swift in Sources */,
 				40151B8022C9801800540A04 /* SettingsProvider.swift in Sources */,
@@ -911,6 +939,7 @@
 				40151BC722CAC1EE00540A04 /* AddNewDestinationViewController+SectionsFactory.swift in Sources */,
 				40151B8F22CAABC400540A04 /* Destination.swift in Sources */,
 				40151BA222CAB22800540A04 /* DestinationsListViewController+NoDestinations.swift in Sources */,
+				4073A5E722CEA117002C2F7B /* UISplitViewController+SplitNavigatorProtocol.swift in Sources */,
 				40151B8C22CAAAB600540A04 /* DestinationsListViewController+SectionsFactory.swift in Sources */,
 				407A105122C2DCF7005DA2D7 /* ForecastPrecipType.swift in Sources */,
 				407A109522C2E2C1005DA2D7 /* ReduxMeObservableProtocol.swift in Sources */,
@@ -936,6 +965,8 @@
 				407A108222C2E2C1005DA2D7 /* ReduxMe+DisposableBag.swift in Sources */,
 				407A10DD22C9669F005DA2D7 /* ForecastViewController+ForecastPropertiesSection.swift in Sources */,
 				407A10E122C96CEB005DA2D7 /* DailyForecastTableViewCell.swift in Sources */,
+				4073A5E522CEA0DE002C2F7B /* SplitNavigatorProtocol.swift in Sources */,
+				4073A5EB22CEB218002C2F7B /* NumberOfDaysTableViewCell.swift in Sources */,
 				407A108B22C2E2C1005DA2D7 /* ReduxMeReducerProtocol.swift in Sources */,
 				407A109822C2E2DC005DA2D7 /* AppState.swift in Sources */,
 				407A10C122C95423005DA2D7 /* TemperatureTableViewCellConfigurator.swift in Sources */,
@@ -944,6 +975,7 @@
 				407A104722C2C54C005DA2D7 /* Coordinates.swift in Sources */,
 				407A10A222C2E541005DA2D7 /* LocationProvider.swift in Sources */,
 				40151BB922CABD1F00540A04 /* SearchLocationAdapter.swift in Sources */,
+				4073A5EE22CEB283002C2F7B /* NumberOfDaysCellViewModel.swift in Sources */,
 				40151BA622CAB2DF00540A04 /* NoDestinationsTableViewCell.swift in Sources */,
 				40151B9722CAAD8600540A04 /* DestinationsProvider.swift in Sources */,
 				407A10E622C96DD3005DA2D7 /* DailyForecastTableViewCellConfigurator.swift in Sources */,

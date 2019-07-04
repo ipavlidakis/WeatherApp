@@ -12,6 +12,7 @@ import UIKit
 final class DestinationsListViewController: UIViewController {
 
     private lazy var tableView: UITableView = UITableView()
+    private var hasAuthorizedLocationServices = false
 
     var store: ReduxMe.Store<AppState>!
     var tableViewAdapter: TableViewAdapter!
@@ -30,11 +31,6 @@ extension DestinationsListViewController {
         title = "Destinations".localized
         view.backgroundColor = .white
 
-        navigationItem.leftBarButtonItem = UIBarButtonItem(
-            barButtonSystemItem: .cancel,
-            target: self,
-            action: #selector(dismissMe))
-
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem: .add,
             target: self,
@@ -45,6 +41,11 @@ extension DestinationsListViewController {
         ReduxMe.Observable<AppState, DestinationsState>{ $0.destinationsState }
             .subscribe(on: store)
             .onChange(self.updatedDestinationsState)
+            .disposed(by: disposableBag)
+
+        ReduxMe.Observable<AppState, CurrentLocationState>{ $0.currentLocation }
+            .subscribe(on: store)
+            .onChange(self.updatedLocationState)
             .disposed(by: disposableBag)
     }
 
@@ -60,12 +61,6 @@ extension DestinationsListViewController {
 extension DestinationsListViewController {
 
     @objc
-    func dismissMe() {
-
-        dismiss(animated: true, completion: nil)
-    }
-
-    @objc
     func addNewDestination() {
 
         router.pushAddNewDestination()
@@ -73,6 +68,20 @@ extension DestinationsListViewController {
 
     func updatedDestinationsState(
         _ destinationsState: DestinationsState) {
+
+        tableViewAdapter.update(
+            sections: tableViewSectionsFactory.makeSections(),
+            on: tableView)
+    }
+
+    func updatedLocationState(
+        _ destinationsState: CurrentLocationState) {
+
+        guard destinationsState.hasAccess != hasAuthorizedLocationServices else {
+            return
+        }
+
+        hasAuthorizedLocationServices = destinationsState.hasAccess
 
         tableViewAdapter.update(
             sections: tableViewSectionsFactory.makeSections(),

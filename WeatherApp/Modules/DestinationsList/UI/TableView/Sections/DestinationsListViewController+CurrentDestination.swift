@@ -13,8 +13,13 @@ extension DestinationsListViewController {
 
     struct CurrentDestination: SectionProtocol {
 
+        let router: Routing
         let configurator: DestinationTableViewCellConfigurator
-        let viewModel = Destination(coordinates: Coordinates(latitude: 0, longitude: 0), name: "Current Location".localized, addedAt: Date())
+        let viewModel = Destination(
+            coordinates: Coordinates(latitude: 0, longitude: 0),
+            name: "Current Location".localized,
+            addedAt: Date(),
+            isCurrentLocation: true)
 
         func registerCells(on tableView: UITableView) {
 
@@ -38,6 +43,14 @@ extension DestinationsListViewController {
                 subtitle: "")
 
             return cell
+        }
+
+        func didSelectItem(
+            at indexPath: IndexPath,
+            on tableView: UITableView) {
+
+            tableView.deselectRow(at: indexPath, animated: true)
+            router.showForecast(with: Destination.current)
         }
     }
 }

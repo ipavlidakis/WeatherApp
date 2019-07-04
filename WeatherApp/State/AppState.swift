@@ -11,13 +11,11 @@ import Foundation
 struct AppState: ReduxMeStateProtocol {
 
     let currentLocation: CurrentLocationState
-    let forecastState: ForecastState
-    let unitsState: UnitsState
+    let settingsState: SettingsState
     let destinationsState: DestinationsState
 
     static let initial = AppState(
         currentLocation: .initial,
-        forecastState: .initial,
-        unitsState: .initial,
+        settingsState: .initial,
         destinationsState: .initial)
 }

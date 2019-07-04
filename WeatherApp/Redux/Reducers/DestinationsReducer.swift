@@ -21,8 +21,7 @@ struct DestinationsReducer: ReduxMeReducerProtocol {
 
         return AppState(
             currentLocation: appState.currentLocation,
-            forecastState: appState.forecastState,
-            unitsState: appState.unitsState,
+            settingsState: appState.settingsState,
             destinationsState: DestinationsState(destinations: action.destinations)) as! State
     }
 }

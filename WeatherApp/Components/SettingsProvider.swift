@@ -15,6 +15,7 @@ final class SettingsProvider: NSObject {
         case version = "version_preference"
         case build = "build_preference"
         case useImperialUnits = "use_imperial_units"
+        case noOfDaysToFetch = "no_of_next_days_to_fetch"
     }
 
     private let store: ReduxMe.Store<AppState>
@@ -37,6 +38,10 @@ final class SettingsProvider: NSObject {
             name: UserDefaults.didChangeNotification,
             object: nil)
 
+        if keysValueStore.integer(forKey: Keys.noOfDaysToFetch.rawValue) == 0 {
+            UserDefaults.standard.set(5, forKey: Keys.noOfDaysToFetch.rawValue)
+        }
+
         guard
             let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String,
             let buildNumber = Bundle.main.infoDictionary?["CFBundleVersion"] as? String
@@ -53,9 +58,10 @@ extension SettingsProvider {
     func settingsUpdated() {
 
         store.dispatch(
-            UpdateUnitsAction(
+            UpdateSettingsAction(
                 unit: keysValueStore.bool(forKey: Keys.useImperialUnits.rawValue)
                     ? .us
-                    : .si))
+                    : .si,
+                numberOfDaysToFetch: keysValueStore.integer(forKey: Keys.noOfDaysToFetch.rawValue)))
     }
 }

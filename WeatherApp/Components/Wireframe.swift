@@ -12,11 +12,13 @@ import MapKit
 
 protocol WireframeProtocol {
 
-    func makeForecastViewController(router: Routing) -> UIViewController
+    func makeForecastViewController(
+        destination: Destination) -> UIViewController
 
-    func makeListViewController() -> UIViewController
+    func makeListViewController(
+        router: Routing) -> UIViewController
 
-    func makeAddNewDestinationViewController(router: Routing) -> UIViewController
+    func makeAddNewDestinationViewController() -> UIViewController
 }
 
 struct Wireframe {
@@ -30,43 +32,54 @@ struct Wireframe {
 
 extension Wireframe: WireframeProtocol {
 
-    func makeForecastViewController(router: Routing) -> UIViewController {
+    func makeNavigationController(
+        with rootViewController: UIViewController) -> UINavigationController {
+
+        let navigationController = UINavigationController(
+            rootViewController: rootViewController)
+
+        return navigationController
+    }
+
+    func makeForecastViewController(
+        destination: Destination) -> UIViewController {
 
         let viewController = ForecastViewController()
         viewController.store = store
         viewController.forecastService = forecastService
         viewController.tableViewAdapter = TableViewAdapter()
         viewController.colorProvider = colorProvider
-        viewController.router = router
+        viewController.destination = destination
         viewController.tableViewSectionsFactory = ForecastViewController.SectionsFactory(
             fontProvider: fontProvider,
-            colorProvider: colorProvider)
-
-        return viewController
-    }
-
-    func makeListViewController() -> UIViewController {
-
-        let navigationController = UINavigationController()
-        let viewController = DestinationsListViewController()
-        viewController.store = store
-        viewController.router = Router(
-            navigator: navigationController,
-            wireframe: self)
-        viewController.tableViewAdapter = TableViewAdapter()
-        viewController.tableViewSectionsFactory = DestinationsListViewController.SectionsFactory(
-            fontProvider: fontProvider,
             colorProvider: colorProvider,
-            locationProvider: locationProvider,
-            itemsProvider: { self.store.state.destinationsState.destinations })
+            numberOfDaysToFetchProvider: { return self.store.state.settingsState.numberOfDaysToFetch })
 
-        navigationController.viewControllers = [viewController]
+        let navigationController = UINavigationController(
+            rootViewController: viewController)
         navigationController.navigationBar.prefersLargeTitles = true
 
         return navigationController
     }
 
-    func makeAddNewDestinationViewController(router: Routing) -> UIViewController {
+    func makeListViewController(
+        router: Routing) -> UIViewController {
+
+        let viewController = DestinationsListViewController()
+        viewController.store = store
+        viewController.router = router
+        viewController.tableViewAdapter = TableViewAdapter()
+        viewController.tableViewSectionsFactory = DestinationsListViewController.SectionsFactory(
+            fontProvider: fontProvider,
+            colorProvider: colorProvider,
+            locationProvider: locationProvider,
+            router: router,
+            itemsProvider: { self.store.state.destinationsState.destinations })
+
+        return viewController
+    }
+
+    func makeAddNewDestinationViewController() -> UIViewController {
 
         let viewController = AddNewDestinationViewController()
 

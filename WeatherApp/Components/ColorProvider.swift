@@ -44,6 +44,12 @@ protocol ColorProviding {
     var hot: UIColor { get }
     var extremelyHot: UIColor { get }
 
+    // MARK: NumberOfDaysTableViewCell
+
+    var numberOfDaysCellBackground: UIColor { get }
+    var numberOfDaysLabel: UIColor { get }
+    var numberOfDaysSeparator: UIColor { get }
+
     // MARK: NoDestinations
 
     var noDestinationsCellBackground: UIColor { get }
@@ -66,6 +72,10 @@ protocol ColorProviding {
 
     var addDestinationsLoadingCellBackground: UIColor { get }
     var addDestinationsLoadingTitleLabel: UIColor { get }
+
+    // MARK: ForecastViewController
+
+    var noLocationAccessBackground: UIColor { get }
 }
 
 struct ColorProvider: ColorProviding {
@@ -89,6 +99,12 @@ struct ColorProvider: ColorProviding {
     var dayNameLabel: UIColor = .black
     var dailyForeacastIconLabel: UIColor = .black
     var dailyForecastTemperatureLabel: UIColor = .black
+
+    // MARK: NumberOfDaysTableViewCell
+
+    var numberOfDaysCellBackground: UIColor = .clear
+    var numberOfDaysLabel: UIColor = .black
+    var numberOfDaysSeparator: UIColor = .gray
 
     // MARK: Temperatures
 
@@ -125,4 +141,8 @@ struct ColorProvider: ColorProviding {
 
     var addDestinationsLoadingCellBackground: UIColor = .clear
     var addDestinationsLoadingTitleLabel: UIColor = .gray
+
+    // MARK: ForecastViewController
+
+    var noLocationAccessBackground: UIColor = .white
 }

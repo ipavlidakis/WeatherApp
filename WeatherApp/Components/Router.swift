@@ -11,7 +11,7 @@ import UIKit
 
 protocol Routing {
 
-    func showForecast()
+    func showForecast(with destination: Destination)
 
     func presentDestinationsList()
 
@@ -21,29 +21,35 @@ protocol Routing {
 struct Router {
 
     private let navigator: NavigatorProtocol
+    private let splitNavigator: SplitNavigatorProtocol
     private let wireframe: WireframeProtocol
 
     init(navigator: NavigatorProtocol,
+         splitNavigator: SplitNavigatorProtocol,
          wireframe: WireframeProtocol) {
 
         self.navigator = navigator
+        self.splitNavigator = splitNavigator
         self.wireframe = wireframe
     }
 }
 
 extension Router: Routing {
 
-    func showForecast() {
+    func showForecast(with destination: Destination) {
 
-        navigator.viewControllers = [
-            wireframe.makeForecastViewController(router: self)
-        ]
+        let viewController = wireframe.makeForecastViewController(
+            destination: destination)
+
+        splitNavigator.showDetailViewController(
+            viewController,
+            sender: nil)
     }
 
     func presentDestinationsList() {
 
         navigator.present(
-            wireframe.makeListViewController(),
+            wireframe.makeListViewController(router: self),
             animated: true,
             completion: nil)
     }
@@ -51,7 +57,7 @@ extension Router: Routing {
     func pushAddNewDestination() {
 
         navigator.pushViewController(
-            wireframe.makeAddNewDestinationViewController(router: self),
+            wireframe.makeAddNewDestinationViewController(),
             animated: true)
     }
 }

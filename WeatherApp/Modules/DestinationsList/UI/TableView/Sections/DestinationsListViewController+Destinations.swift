@@ -13,6 +13,7 @@ extension DestinationsListViewController {
 
     struct Destinations: SectionProtocol {
 
+        let router: Routing
         let configurator: DestinationTableViewCellConfigurator
         let dateFormatter: DateFormatter
         let viewModels: [Destination]
@@ -43,6 +44,17 @@ extension DestinationsListViewController {
                 subtitle: dateFormatter.string(from: viewModel.addedAt))
 
             return cell
+        }
+
+        func didSelectItem(
+            at indexPath: IndexPath,
+            on tableView: UITableView) {
+
+            tableView.deselectRow(at: indexPath, animated: true)
+
+            let destination = viewModels[indexPath.row]
+
+            router.showForecast(with: destination)
         }
     }
 }

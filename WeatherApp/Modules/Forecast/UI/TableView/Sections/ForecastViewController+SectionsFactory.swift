@@ -14,6 +14,7 @@ extension ForecastViewController {
 
         let fontProvider: FontProviding
         let colorProvider: ColorProviding
+        let numberOfDaysToFetchProvider: () -> Int
 
         func makeSections(for forecast: Forecast?) -> [SectionProtocol] {
 
@@ -23,6 +24,7 @@ extension ForecastViewController {
 
             sections.append(addTemperatureSection(forecast: forecast))
             sections.append(addForecastPropertiesSection(forecast: forecast))
+            sections.append(addNumberOfDaysSection(forecast: forecast))
             sections.append(addDailyForecastSection(forecast: forecast))
 
             return sections.compactMap { $0 }
@@ -122,22 +124,66 @@ extension ForecastViewController.SectionsFactory {
 
         guard let dailyForecasts = forecast.daily?.data else { return nil }
 
-        let viewModels: [DailyForecastViewModel] = dailyForecasts.map {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.generatesDecimalNumbers = false
 
-            let date = Date(timeIntervalSince1970: $0.time)
+        let cal = Calendar.current
+        let currentDate = cal.startOfDay(for: Date())
+        let nextDates = (1...numberOfDaysToFetchProvider()).map {
+            return cal.date(byAdding: .day, value: $0, to: currentDate)!
+        }
+
+        let viewModels: [DailyForecastViewModel] = dailyForecasts.compactMap { viewModel in
+
+            let date = cal.startOfDay(for: Date(timeIntervalSince1970: viewModel.time))
+
+            guard nextDates.contains(date) else { return nil }
+
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "EEE"
             let dayInWeek = dateFormatter.string(from: date)
 
+            let temperature: String = {
+
+                guard let temperature = viewModel.temperatureHigh else {
+                    return "-"
+                }
+
+                return numberFormatter.string(from: NSNumber(value: temperature)) ?? "-"
+            }()
+
             return DailyForecastViewModel(
                 dayName: dayInWeek,
-                icon: $0.icon?.icon ?? "-",
-                temperature: $0.temperatureHigh?.description ?? "-",
+                icon: viewModel.icon?.icon ?? "-",
+                temperature: temperature,
                 unit: forecast.flags.units.measurementUnits.temperatureMax)
         }
 
         return ForecastViewController.DailyForecastSection(
             configurator: configurator,
             viewModels: viewModels)
+    }
+
+    func addNumberOfDaysSection(
+        forecast: Forecast) -> SectionProtocol? {
+
+        guard
+            let dailyForecasts = forecast.daily?.data,
+            !dailyForecasts.isEmpty
+        else { return nil }
+
+        let numberOfDays: Int = {
+            guard
+                dailyForecasts.count > numberOfDaysToFetchProvider()
+            else { return dailyForecasts.count }
+
+            return numberOfDaysToFetchProvider()
+        }()
+
+        return ForecastViewController.NumberOfDaysSection(
+            configurator: NumberOfDaysTemperatureTableViewCellConfigurator(
+                fontProvider: fontProvider,
+                colorProvider: colorProvider),
+            viewModel: NumberOfDaysCellViewModel(numberOfDays: "Next \(numberOfDays) days"))
     }
 }

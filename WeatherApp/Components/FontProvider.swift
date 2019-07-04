@@ -29,6 +29,10 @@ protocol FontProviding {
     func dailyForecastIconLabel() -> UIFont
     func dailyForecastTemperatureLabel() -> UIFont
 
+    // MARK: NumberOfDaysTableViewCell
+
+    func numberOfDaysLabel() -> UIFont
+
     // MARK: NoDestinations
 
     func noDestinationsTitleLabel() -> UIFont
@@ -100,6 +104,13 @@ struct FontProvider: FontProviding {
     func dailyForecastTemperatureLabel() -> UIFont {
 
         return UIFont.preferredFont(forTextStyle: .title3)
+    }
+
+    // MARK: NumberOfDaysTableViewCell
+
+    func numberOfDaysLabel() -> UIFont {
+
+        return UIFont.preferredFont(forTextStyle: .body)
     }
 
     // MARK: NoDestinations

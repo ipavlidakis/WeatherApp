@@ -20,8 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         colorProvider: ColorProvider(), store: store,
         forecastService: ForecastService(),
         locationProvider: locationProvider)
-    private lazy var navigationController = UINavigationController()
-    private lazy var router = Router(navigator: navigationController, wireframe: wireframe)
     private lazy var destinationsProvider = DestinationsProvider(
         keyValueStore: UserDefaults.standard,
         encoder: JSONEncoder(),
@@ -35,15 +33,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         store = ReduxMe.Store<AppState>(
             state: .initial,
-            reducers: [CurrentLocationReducer(), UnitsReducer(), DestinationsReducer()])
+            reducers: [CurrentLocationReducer(), SettingsReducer(), DestinationsReducer()])
 
         _ = settingsProvider
         _ = destinationsProvider
 
-        window?.rootViewController = navigationController
-        navigationController.navigationBar.prefersLargeTitles = true
+        let splitViewController =  UISplitViewController()
 
-        router.showForecast()
+        let detailsViewController = wireframe.makeForecastViewController(
+            destination: Destination.current)
+
+        let masterViewController = UINavigationController()
+        masterViewController.navigationBar.prefersLargeTitles = true
+        let listViewController = wireframe.makeListViewController(
+            router: Router(
+                navigator: masterViewController,
+                splitNavigator: splitViewController,
+                wireframe: wireframe))
+        masterViewController.viewControllers = [listViewController]
+
+        splitViewController.viewControllers = [masterViewController, detailsViewController]
+
+        window?.rootViewController = splitViewController
 
         window?.makeKeyAndVisible()
 

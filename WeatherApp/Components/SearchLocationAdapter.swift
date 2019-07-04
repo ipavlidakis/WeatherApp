@@ -126,7 +126,8 @@ extension SearchLocationAdapter {
             let destination = Destination(
                 coordinates: Coordinates(latitude: itemResponse.placemark.coordinate.latitude, longitude: itemResponse.placemark.coordinate.latitude),
                 name: "\(item.title), \(item.subtitle)",
-                addedAt: Date())
+                addedAt: Date(),
+                isCurrentLocation: false)
 
             completion(destination)
         }

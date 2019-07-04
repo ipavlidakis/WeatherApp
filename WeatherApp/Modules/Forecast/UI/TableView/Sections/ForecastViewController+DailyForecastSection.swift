@@ -39,5 +39,9 @@ extension ForecastViewController {
 
             return cell
         }
+
+        func shouldHighlightRow(at row: Int) -> Bool {
+            return false
+        }
     }
 }

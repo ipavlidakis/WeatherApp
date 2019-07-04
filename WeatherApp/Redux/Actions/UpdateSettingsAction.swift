@@ -1,5 +1,5 @@
 //
-//  UnitsState.swift
+//  UpdateSettingsAction.swift
 //  WeatherApp
 //
 //  Created by Ilias Pavlidakis on 01/07/2019.
@@ -8,9 +8,8 @@
 
 import Foundation
 
-struct UnitsState: ReduxMeSubstateProtocol, Equatable {
+struct UpdateSettingsAction: ReduxMeActionProtocol {
 
     let unit: Units
-
-    static let initial = UnitsState(unit: .si)
+    let numberOfDaysToFetch: Int
 }

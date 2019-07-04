@@ -78,6 +78,19 @@ extension ReduxMe.Observable: ReduxMeObservableProtocol {
     }
 
     @discardableResult
+    func manualTrigger() -> Self {
+
+        guard
+            let substate = lastUsedSubstate,
+            let onChangeUpdateBlock = onChangeUpdateBlock
+        else { return self }
+
+        onChangeUpdateBlock(substate)
+
+        return self
+    }
+
+    @discardableResult
     func disposed(
         by bag: ReduxMeDisposableBagProtocol) -> Self {
 
