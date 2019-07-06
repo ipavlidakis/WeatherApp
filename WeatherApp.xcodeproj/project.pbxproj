@@ -56,7 +56,6 @@
 		407A102122C2C4B8005DA2D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A102022C2C4B8005DA2D7 /* AppDelegate.swift */; };
 		407A102A22C2C4B9005DA2D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 407A102922C2C4B9005DA2D7 /* Assets.xcassets */; };
 		407A102D22C2C4B9005DA2D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 407A102B22C2C4B9005DA2D7 /* LaunchScreen.storyboard */; };
-		407A103822C2C4B9005DA2D7 /* WeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A103722C2C4B9005DA2D7 /* WeatherAppTests.swift */; };
 		407A104422C2C4D3005DA2D7 /* ForecastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A104322C2C4D3005DA2D7 /* ForecastService.swift */; };
 		407A104722C2C54C005DA2D7 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A104622C2C54C005DA2D7 /* Coordinates.swift */; };
 		407A104922C2C5BF005DA2D7 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A104822C2C5BF005DA2D7 /* Forecast.swift */; };
@@ -123,6 +122,21 @@
 		407A10E422C96DA6005DA2D7 /* DailyForecastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A10E322C96DA6005DA2D7 /* DailyForecastViewModel.swift */; };
 		407A10E622C96DD3005DA2D7 /* DailyForecastTableViewCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A10E522C96DD3005DA2D7 /* DailyForecastTableViewCellConfigurator.swift */; };
 		407A10E822C96EEB005DA2D7 /* ForecastViewController+DailyForecastSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A10E722C96EEB005DA2D7 /* ForecastViewController+DailyForecastSection.swift */; };
+		40DBA3B322D0CBA00046BB3E /* ReduxMe_DisposeBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DBA3B022D0CBA00046BB3E /* ReduxMe_DisposeBagTests.swift */; };
+		40DBA3B422D0CBA00046BB3E /* ReduxMe_StoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DBA3B122D0CBA00046BB3E /* ReduxMe_StoreTests.swift */; };
+		40DBA3B522D0CBA00046BB3E /* ReduxMe_ObservableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DBA3B222D0CBA00046BB3E /* ReduxMe_ObservableTests.swift */; };
+		40DBA3C322D0CBD80046BB3E /* ReduxMeStub+Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DBA3B722D0CBD80046BB3E /* ReduxMeStub+Store.swift */; };
+		40DBA3C422D0CBD80046BB3E /* ReduxMeStub+Listener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DBA3B822D0CBD80046BB3E /* ReduxMeStub+Listener.swift */; };
+		40DBA3C522D0CBD80046BB3E /* ReduxMeStub+SerialDispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DBA3B922D0CBD80046BB3E /* ReduxMeStub+SerialDispatchQueue.swift */; };
+		40DBA3C622D0CBD80046BB3E /* ReduxMeStub+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DBA3BA22D0CBD80046BB3E /* ReduxMeStub+Action.swift */; };
+		40DBA3C722D0CBD80046BB3E /* ReduxMeStub+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DBA3BB22D0CBD80046BB3E /* ReduxMeStub+State.swift */; };
+		40DBA3C822D0CBD80046BB3E /* ReduxMeStub+Substate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DBA3BC22D0CBD80046BB3E /* ReduxMeStub+Substate.swift */; };
+		40DBA3C922D0CBD80046BB3E /* ReduxMeStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DBA3BD22D0CBD80046BB3E /* ReduxMeStub.swift */; };
+		40DBA3CA22D0CBD80046BB3E /* ReduxMeStub+Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DBA3BE22D0CBD80046BB3E /* ReduxMeStub+Disposable.swift */; };
+		40DBA3CB22D0CBD80046BB3E /* ReduxMeStub+DisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DBA3BF22D0CBD80046BB3E /* ReduxMeStub+DisposeBag.swift */; };
+		40DBA3CC22D0CBD80046BB3E /* ReduxMeStub+Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DBA3C022D0CBD80046BB3E /* ReduxMeStub+Dispatcher.swift */; };
+		40DBA3CD22D0CBD80046BB3E /* ReduxMeStub+Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DBA3C122D0CBD80046BB3E /* ReduxMeStub+Middleware.swift */; };
+		40DBA3CE22D0CBD80046BB3E /* ReduxMeStub+Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40DBA3C222D0CBD80046BB3E /* ReduxMeStub+Reducer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -188,7 +202,6 @@
 		407A102C22C2C4B9005DA2D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		407A102E22C2C4B9005DA2D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		407A103322C2C4B9005DA2D7 /* WeatherAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		407A103722C2C4B9005DA2D7 /* WeatherAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppTests.swift; sourceTree = "<group>"; };
 		407A103922C2C4B9005DA2D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		407A104322C2C4D3005DA2D7 /* ForecastService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastService.swift; sourceTree = "<group>"; };
 		407A104622C2C54C005DA2D7 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
@@ -256,6 +269,21 @@
 		407A10E322C96DA6005DA2D7 /* DailyForecastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecastViewModel.swift; sourceTree = "<group>"; };
 		407A10E522C96DD3005DA2D7 /* DailyForecastTableViewCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecastTableViewCellConfigurator.swift; sourceTree = "<group>"; };
 		407A10E722C96EEB005DA2D7 /* ForecastViewController+DailyForecastSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ForecastViewController+DailyForecastSection.swift"; sourceTree = "<group>"; };
+		40DBA3B022D0CBA00046BB3E /* ReduxMe_DisposeBagTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReduxMe_DisposeBagTests.swift; path = ../../../../../../Desktop/Implementation/ReduxMe_DisposeBagTests.swift; sourceTree = "<group>"; };
+		40DBA3B122D0CBA00046BB3E /* ReduxMe_StoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReduxMe_StoreTests.swift; path = ../../../../../../Desktop/Implementation/ReduxMe_StoreTests.swift; sourceTree = "<group>"; };
+		40DBA3B222D0CBA00046BB3E /* ReduxMe_ObservableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReduxMe_ObservableTests.swift; path = ../../../../../../Desktop/Implementation/ReduxMe_ObservableTests.swift; sourceTree = "<group>"; };
+		40DBA3B722D0CBD80046BB3E /* ReduxMeStub+Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ReduxMeStub+Store.swift"; path = "../../../../../Desktop/Stubs/ReduxMeStub+Store.swift"; sourceTree = "<group>"; };
+		40DBA3B822D0CBD80046BB3E /* ReduxMeStub+Listener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ReduxMeStub+Listener.swift"; path = "../../../../../Desktop/Stubs/ReduxMeStub+Listener.swift"; sourceTree = "<group>"; };
+		40DBA3B922D0CBD80046BB3E /* ReduxMeStub+SerialDispatchQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ReduxMeStub+SerialDispatchQueue.swift"; path = "../../../../../Desktop/Stubs/ReduxMeStub+SerialDispatchQueue.swift"; sourceTree = "<group>"; };
+		40DBA3BA22D0CBD80046BB3E /* ReduxMeStub+Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ReduxMeStub+Action.swift"; path = "../../../../../Desktop/Stubs/ReduxMeStub+Action.swift"; sourceTree = "<group>"; };
+		40DBA3BB22D0CBD80046BB3E /* ReduxMeStub+State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ReduxMeStub+State.swift"; path = "../../../../../Desktop/Stubs/ReduxMeStub+State.swift"; sourceTree = "<group>"; };
+		40DBA3BC22D0CBD80046BB3E /* ReduxMeStub+Substate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ReduxMeStub+Substate.swift"; path = "../../../../../Desktop/Stubs/ReduxMeStub+Substate.swift"; sourceTree = "<group>"; };
+		40DBA3BD22D0CBD80046BB3E /* ReduxMeStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReduxMeStub.swift; path = ../../../../../Desktop/Stubs/ReduxMeStub.swift; sourceTree = "<group>"; };
+		40DBA3BE22D0CBD80046BB3E /* ReduxMeStub+Disposable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ReduxMeStub+Disposable.swift"; path = "../../../../../Desktop/Stubs/ReduxMeStub+Disposable.swift"; sourceTree = "<group>"; };
+		40DBA3BF22D0CBD80046BB3E /* ReduxMeStub+DisposeBag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ReduxMeStub+DisposeBag.swift"; path = "../../../../../Desktop/Stubs/ReduxMeStub+DisposeBag.swift"; sourceTree = "<group>"; };
+		40DBA3C022D0CBD80046BB3E /* ReduxMeStub+Dispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ReduxMeStub+Dispatcher.swift"; path = "../../../../../Desktop/Stubs/ReduxMeStub+Dispatcher.swift"; sourceTree = "<group>"; };
+		40DBA3C122D0CBD80046BB3E /* ReduxMeStub+Middleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ReduxMeStub+Middleware.swift"; path = "../../../../../Desktop/Stubs/ReduxMeStub+Middleware.swift"; sourceTree = "<group>"; };
+		40DBA3C222D0CBD80046BB3E /* ReduxMeStub+Reducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ReduxMeStub+Reducer.swift"; path = "../../../../../Desktop/Stubs/ReduxMeStub+Reducer.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -466,15 +494,9 @@
 		407A101F22C2C4B8005DA2D7 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
-				40151B9822CAADA200540A04 /* Protocols */,
-				407A10AC22C2F281005DA2D7 /* Extensions */,
 				407A10A022C2E531005DA2D7 /* Components */,
 				407A109622C2E2D5005DA2D7 /* State */,
-				407A106922C2E287005DA2D7 /* Redux */,
 				407A106422C2E124005DA2D7 /* Resources */,
-				407A104B22C2DC32005DA2D7 /* Enums */,
-				407A104522C2C543005DA2D7 /* Models */,
-				407A104222C2C4C3005DA2D7 /* Services */,
 				407A106522C2E17E005DA2D7 /* Modules */,
 				407A102022C2C4B8005DA2D7 /* AppDelegate.swift */,
 			);
@@ -484,7 +506,11 @@
 		407A103622C2C4B9005DA2D7 /* WeatherAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				407A103722C2C4B9005DA2D7 /* WeatherAppTests.swift */,
+				40DBA3B622D0CBC70046BB3E /* Stubs */,
+				40DBA3AA22D0CA820046BB3E /* Components */,
+				40DBA3AB22D0CA8D0046BB3E /* State */,
+				40DBA3AC22D0CA950046BB3E /* Resources */,
+				40DBA3AD22D0CA9A0046BB3E /* Modules */,
 				407A103922C2C4B9005DA2D7 /* Info.plist */,
 			);
 			path = WeatherAppTests;
@@ -628,6 +654,12 @@
 		407A10A022C2E531005DA2D7 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				407A106922C2E287005DA2D7 /* Redux */,
+				407A104222C2C4C3005DA2D7 /* Services */,
+				407A104522C2C543005DA2D7 /* Models */,
+				407A104B22C2DC32005DA2D7 /* Enums */,
+				40151B9822CAADA200540A04 /* Protocols */,
+				407A10AC22C2F281005DA2D7 /* Extensions */,
 				407A10A122C2E541005DA2D7 /* LocationProvider.swift */,
 				407A10B522C95104005DA2D7 /* TableViewAdapter.swift */,
 				407A10C522C95492005DA2D7 /* FontProvider.swift */,
@@ -771,6 +803,64 @@
 			path = DailyForecast;
 			sourceTree = "<group>";
 		};
+		40DBA3AA22D0CA820046BB3E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				40DBA3AE22D0CAB10046BB3E /* Redux */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		40DBA3AB22D0CA8D0046BB3E /* State */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		40DBA3AC22D0CA950046BB3E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		40DBA3AD22D0CA9A0046BB3E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		40DBA3AE22D0CAB10046BB3E /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				40DBA3B022D0CBA00046BB3E /* ReduxMe_DisposeBagTests.swift */,
+				40DBA3B222D0CBA00046BB3E /* ReduxMe_ObservableTests.swift */,
+				40DBA3B122D0CBA00046BB3E /* ReduxMe_StoreTests.swift */,
+			);
+			path = Redux;
+			sourceTree = "<group>";
+		};
+		40DBA3B622D0CBC70046BB3E /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				40DBA3BD22D0CBD80046BB3E /* ReduxMeStub.swift */,
+				40DBA3BA22D0CBD80046BB3E /* ReduxMeStub+Action.swift */,
+				40DBA3C022D0CBD80046BB3E /* ReduxMeStub+Dispatcher.swift */,
+				40DBA3BE22D0CBD80046BB3E /* ReduxMeStub+Disposable.swift */,
+				40DBA3BF22D0CBD80046BB3E /* ReduxMeStub+DisposeBag.swift */,
+				40DBA3B822D0CBD80046BB3E /* ReduxMeStub+Listener.swift */,
+				40DBA3C122D0CBD80046BB3E /* ReduxMeStub+Middleware.swift */,
+				40DBA3C222D0CBD80046BB3E /* ReduxMeStub+Reducer.swift */,
+				40DBA3B922D0CBD80046BB3E /* ReduxMeStub+SerialDispatchQueue.swift */,
+				40DBA3BB22D0CBD80046BB3E /* ReduxMeStub+State.swift */,
+				40DBA3B722D0CBD80046BB3E /* ReduxMeStub+Store.swift */,
+				40DBA3BC22D0CBD80046BB3E /* ReduxMeStub+Substate.swift */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -824,6 +914,7 @@
 					};
 					407A103222C2C4B9005DA2D7 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 407A101C22C2C4B8005DA2D7;
 					};
 				};
@@ -990,7 +1081,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				407A103822C2C4B9005DA2D7 /* WeatherAppTests.swift in Sources */,
+				40DBA3CA22D0CBD80046BB3E /* ReduxMeStub+Disposable.swift in Sources */,
+				40DBA3C522D0CBD80046BB3E /* ReduxMeStub+SerialDispatchQueue.swift in Sources */,
+				40DBA3B522D0CBA00046BB3E /* ReduxMe_ObservableTests.swift in Sources */,
+				40DBA3B422D0CBA00046BB3E /* ReduxMe_StoreTests.swift in Sources */,
+				40DBA3C322D0CBD80046BB3E /* ReduxMeStub+Store.swift in Sources */,
+				40DBA3C922D0CBD80046BB3E /* ReduxMeStub.swift in Sources */,
+				40DBA3B322D0CBA00046BB3E /* ReduxMe_DisposeBagTests.swift in Sources */,
+				40DBA3C822D0CBD80046BB3E /* ReduxMeStub+Substate.swift in Sources */,
+				40DBA3CE22D0CBD80046BB3E /* ReduxMeStub+Reducer.swift in Sources */,
+				40DBA3CD22D0CBD80046BB3E /* ReduxMeStub+Middleware.swift in Sources */,
+				40DBA3C622D0CBD80046BB3E /* ReduxMeStub+Action.swift in Sources */,
+				40DBA3C722D0CBD80046BB3E /* ReduxMeStub+State.swift in Sources */,
+				40DBA3CC22D0CBD80046BB3E /* ReduxMeStub+Dispatcher.swift in Sources */,
+				40DBA3C422D0CBD80046BB3E /* ReduxMeStub+Listener.swift in Sources */,
+				40DBA3CB22D0CBD80046BB3E /* ReduxMeStub+DisposeBag.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1177,6 +1282,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UBW6JB7T2F;
 				INFOPLIST_FILE = WeatherAppTests/Info.plist;
@@ -1187,6 +1293,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ipavlidakis.weather.app.WeatherAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherApp.app/WeatherApp";
@@ -1198,6 +1305,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UBW6JB7T2F;
 				INFOPLIST_FILE = WeatherAppTests/Info.plist;
