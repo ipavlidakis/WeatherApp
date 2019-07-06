@@ -69,3 +69,4 @@ fastlane/screenshots/**/*.png
 fastlane/test_output
 __DerivedData
 .DS_Store
+codesigndoc_exports
